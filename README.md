@@ -18,7 +18,7 @@ or delete one.
  
 ## Entity Relationship diagram (ER)
 - link to [ER diagram](https://drawsql.app/teams/renter/diagrams/renet/embed).
-[ER](./ER.png)
+![ER](./ER.png)
 
 ## Installation
 - if you are a git user:
