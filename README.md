@@ -16,6 +16,10 @@ also, he can click the rent button to enter his details and rent the property.
 Owners, they supposed to have additional property options to add new properties 
 or delete one.
  
+## Entity Relationship diagram (ER)
+- link to [ER diagram](https://drawsql.app/teams/renter/diagrams/renet/embed).
+[ER](./ER.png)
+
 ## Installation
 - if you are a git user:
    - In Your terminal write `git clone https://github.com/CA-G12/Rent_House.git`
