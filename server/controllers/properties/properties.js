@@ -28,12 +28,11 @@ const searchProperties = (req, res) => {
 
 const createProperty = (req, res) => {
   const {
-    photo, address, price, details, ownerId,
+    img, prop_address, price, details, owner_id,
   } = req.body;
 
-  insertPropertyq(photo, address, price, details, ownerId).then(
-    (data) => res.json(data.rows),
-  ).catch((err) => console.log(err));
+  console.log(req.body);
+  insertPropertyq(img, prop_address, price, details, owner_id).then((data) => res.redirect('/')).catch((err) => console.log('err'));
 };
 
 module.exports = {
