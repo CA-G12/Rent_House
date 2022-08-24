@@ -1,7 +1,7 @@
-const { getOwners } = require('../databse/queries');
+const { getOwners } = require('../../databse/queries');
 
 const getAllOwners = (req, res) => {
   getOwners().then((data) => res.json(data.rows)).catch(console.log);
 };
 
-module.exports = getAllOwners;
+module.exports = { getAllOwners };

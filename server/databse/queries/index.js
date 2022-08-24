@@ -1,3 +1,4 @@
-const getOwners = require('./getOwners');
+const { getOwners } = require('./owners');
+const { getProperties, getEmptyProperties } = require('./properties');
 
-module.exports = { getOwners };
+module.exports = { getOwners, getProperties, getEmptyProperties };

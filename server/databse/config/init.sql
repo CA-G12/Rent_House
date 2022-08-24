@@ -36,12 +36,14 @@ INSERT INTO owners (owner_name, contact)
         ('owner2', '0129454545');
 
 
-INSERT INTO properties (prop_address, img, price, details, owner_id)
+INSERT INTO properties (prop_address, img, price, details, owner_id, rent_start, rent_end )
     VALUES 
         ('Gaza', 'https://divisare-res.cloudinary.com/images/dpr_3.0,f_auto,q_auto,w_200/v1643027887/vhloy2ygtvanyhyjgsig/baseli-candrian-federico-farinatti-apartment-house-urdorf.jpg0123456789',
-        1500, '2 floors', 1),
+        1500, '2 floors', 1, null, null),
         ('Gaza', 'https://divisare-res.cloudinary.com/images/dpr_3.0,f_auto,q_auto,w_200/v1643027887/vhloy2ygtvanyhyjgsig/baseli-candrian-federico-farinatti-apartment-house-urdorf.jpg0123456789',
-        1600, '2 floors', 2);
+        1600, '2 floors', 2, null, null),
+        ('Gaza', 'https://divisare-res.cloudinary.com/images/dpr_3.0,f_auto,q_auto,w_200/v1643027887/vhloy2ygtvanyhyjgsig/baseli-candrian-federico-farinatti-apartment-house-urdorf.jpg0123456789',
+        1600, '2 floors', 2, 'Wed Aug 24 07:37:16 2022 PST', 'Wed Aug 31 07:37:16 2022 PST');
         
 
 INSERT INTO renters (renter_name, property_id)
@@ -50,4 +52,8 @@ INSERT INTO renters (renter_name, property_id)
         ('renter2', 2);
 
 
+
+
 COMMIT;
+
+
