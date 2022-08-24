@@ -12,7 +12,7 @@ app.use(compression());
 app.use(helmet());
 
 app.get('/', (req, res) => {
-  res.sendFile(join(__dirname, '..', 'public', 'index.html'));
+  res.sendFile(join(__dirname, '..', 'client', 'index.html'));
 });
 
 app.set('port', process.env.PORT || 5000);
