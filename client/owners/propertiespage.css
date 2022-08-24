@@ -5,23 +5,54 @@
     font-family: sans-serif;;
   }
 
+:root {
+    --black: #483838;
+    --green: #42855B;
+    --light: #90B77D;
+    --lighter: #D2D79F;
+}
 
-  body{
+
+header{
+    background-color: var(--green);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+}
+
+header a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav{
+    display: flex;
+    gap: 10px;
+}
+
+.logo{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+body{
     /* display: flex;
     justify-content: center;
     align-items: center; */
     min-height: 100vh;
- 
-  }
+    background-color: var(--black);
+ }
 
-  .add-prop{
-    background-color: cornflowerblue;
+.add-prop{
+    background-color: var(--green);
     padding: 10px;
     position: absolute;
     top: 10%;
-  }
+    cursor: pointer;
+}
 
-  .container{
+.container{
     display: none !important;
     position: absolute;
     top: 50%;
@@ -34,7 +65,8 @@
     justify-content: center;
     align-items: center;
     padding: 30px 200px;
-  }
+    background-color: var(--green);
+}
 
   input[type="checkbox"]{
     display: none;
@@ -52,7 +84,7 @@
   }
 
   .container .close-btn:hover{
-    color:blue;
+    color: var(--black);
   }
 
 
@@ -83,23 +115,19 @@
     border: 1px solid lightgrey;
     padding-left: 0.8rem;
   }
-
   form .btn{
-    margin: 30px 0;
-    height: 45px;
-    width: 100%;
+    margin: 30px auto;
+
   }
 
   form .btn button{
-    height: 100%;
-    width: 100%;
+    display: block;
+    margin: 30px auto;
+    height: 40px;
+    width: 200px;
     border: none;
     cursor: pointer;
     letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-
-  form .btn button:hover{
-    background-color: darkgray;
+    background-color: var(--black);
+    color: #fff;
   }

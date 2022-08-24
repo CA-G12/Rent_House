@@ -4,9 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./users/homepage/index.css">
+  <title>RentOut</title>
 </head>
 <body>
-  hi
+  <header>
+    <a class="logo" href="#">RentOut</a>
+    <div class="nav">
+      <a href="../client/index.html">
+        Home
+      </a>
+      <a href="../client/owners/propertiespage.html">
+        Owners
+      </a>
+    </div>
+  </header>
+  <input class="search" type="text" placeholder="Search for a property..">
+  <section class="cardsContainer">
+    <div class="card">
+      <img src="https://media.istockphoto.com/photos/portrait-of-a-goat-in-glasses-showing-tongue-picture-id899304016?k=20&m=899304016&s=612x612&w=0&h=AANd_FYQ1qusmQ65zYj0cS5fEbk_Hr4vTQEp3v-SEo8=">
+      <div class="cardContent">
+        <p>Lorem ipsum dolor sit amet</p>
+        <div class="price">
+          <h4>price: </h4>
+          <h4>20</h4>  
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="rentSection">
+      <form class="rent" action="post">
+        <input type="text" name="userName" placeholder="Put your name">
+        <input type="text" name="startDate" placeholder="choose a starting day">
+        <input type="text" name="endDate" placeholder="choose the last day">
+        <button>Rent</button>
+      </form>
+  </section>
+  <script src="./users/homepage/index.js"></script>
 </body>
 </html>
