@@ -1,11 +1,10 @@
 const express = require('express');
+const router = require('./routes');
 
 const app = express();
-require('env2').config();
 
-app.set('port', process.env.PORT || 8000);
-app.get('/', (req, res) => {
-  res.send('Hiiiii');
-});
+app.set('port', process.env.PORT || 5000);
+
+app.use(router);
 
 module.exports = app;
