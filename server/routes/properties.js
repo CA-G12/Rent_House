@@ -1,8 +1,12 @@
 const router = require('express').Router();
 
-const { getAllProperties, getAllEmptyProperties } = require('../controllers');
+const {
+  getAllProperties, getAllEmptyProperties, getPropertyDetails, searchProperties, createProperty,
+} = require('../controllers');
 
-router.get('/', getAllProperties);
+router.route('/').get(getAllProperties).post(createProperty);
 router.get('/empty', getAllEmptyProperties);
+router.get('/:propId', getPropertyDetails);
+router.get('/search/:keyword', searchProperties);
 
 module.exports = router;
