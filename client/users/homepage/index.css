@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --black: #483838;
+    --green: #42855B;
+    --light: #90B77D;
+    --lighter: #D2D79F;
+  }
+  
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background-color: var(--black);
+}
+
+header{
+    background-color: var(--green);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 5rem;
+}
+
+header a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav{
+    display: flex;
+    gap: 1rem;
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.search{
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 30%;
+    border: none;
+}
+
+.search:focus{
+    outline: .1rem solid greenyellow;
+}
+
+.cardsContainer{
+    background-color: var(--black);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1rem;
+}
+
+.card{
+    background-color: var(--green);
+    width: 30rem;
+    height: 35rem;
+    border-radius: 2rem;
+    margin: 1.5rem;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: .1s linear all;
+}
+
+.card img{
+    width:100%;
+    height: 70%;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.cardContent{
+    width: 100%;
+    height: 30%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap:.5rem;
+    padding: 3rem 0;
+    color: #000;
+}
+.cardContent p{
+font-size: 2rem;
+font-weight: 500;
+}
+
+.price{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.8rem;
+}
+
+/*! Rent form */
+
+.rentSection{
+    position:fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff20;
+    backdrop-filter: blur(.3rem);
+}
+
+.rent{
+    width: 50rem;
+    height: 30rem;
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--green);
+    border-radius: 2rem;
+    margin: auto;
+}
+
+.rent input{
+    padding: 1rem 0;
+    margin-bottom: 2rem;    
+}
+
+.rent input:focus{
+    outline: .1rem solid var(--lighter);
+}
+
+.rent button{
+    margin: 0 auto;
+    width: 12rem;
+    padding: .5rem 0;
+    background-color: var(--black);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    border-radius: .5rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
