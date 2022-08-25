@@ -1,7 +1,5 @@
 const searchInput = document.querySelector('.search');
 
-fetch('/properties/empty').then((res) => res.json())
-  .then((data) => createDom(data));
 
 function createDom(data) {
   const cardsContainer = document.querySelector('.cardsContainer');
@@ -40,16 +38,16 @@ function createDom(data) {
     card.addEventListener('click', () => {
       const rentSection = document.querySelector('.rentSection');
       const propertyId = document.querySelector('#propID');
-      console.log('e.kkkkkkkkkkkkkkkkkkkkkkkid', e.id);
+
       propertyId.value = e.id;
       rentSection.style.display = 'flex';
-
-      // rentSection.addEventListener('click', () => {
-      //   rentSection.style.display = 'none';
-      // });
     });
   });
 }
+
+fetch('/properties/empty').then((res) => res.json())
+  .then((data) => createDom(data));
+
 
 searchInput.addEventListener('keyup', () => {
   fetch(`/properties/search/${searchInput.value}`)
