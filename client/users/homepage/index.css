@@ -46,10 +46,10 @@ header a{
 
 .search{
     display: block;
-    margin: 2rem auto;
     padding: 1rem;
     width: 30%;
-    border: none;
+    border: 1px solid white;
+    border-radius: 20px;
 }
 
 .search:focus{
