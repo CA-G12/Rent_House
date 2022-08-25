@@ -1,5 +1,6 @@
 const searchInput = document.querySelector('.search');
 
+
 function createDom(data) {
   const cardsContainer = document.querySelector('.cardsContainer');
   cardsContainer.textContent = '';
@@ -37,6 +38,7 @@ function createDom(data) {
     card.addEventListener('click', () => {
       const rentSection = document.querySelector('.rentSection');
       const propertyId = document.querySelector('#propID');
+
       propertyId.value = e.id;
       rentSection.style.display = 'flex';
     });
@@ -45,6 +47,7 @@ function createDom(data) {
 
 fetch('/properties/empty').then((res) => res.json())
   .then((data) => createDom(data));
+
 
 searchInput.addEventListener('keyup', () => {
   fetch(`/properties/search/${searchInput.value}`)
