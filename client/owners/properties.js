@@ -1,8 +1,5 @@
 const ownerLsist = document.querySelector('.owners-list');
 
-fetch('/owners/').then((res) => res.json())
-  .then((data) => createList(data));
-
 function createList(data) {
   data.forEach((element) => {
     const option = document.createElement('option');
@@ -11,3 +8,6 @@ function createList(data) {
     ownerLsist.appendChild(option);
   });
 }
+
+fetch('/owners/').then((res) => res.json())
+  .then((data) => createList(data));
