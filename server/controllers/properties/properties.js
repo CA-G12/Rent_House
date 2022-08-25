@@ -31,7 +31,7 @@ const createProperty = (req, res) => {
     img, prop_address, price, details, owner_id,
   } = req.body;
 
-  // console.log(req.body);
+
   insertPropertyq(img, prop_address, price, details, owner_id).then(res.redirect('/')).catch((err) => console.log(err));
 };
 
