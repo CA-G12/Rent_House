@@ -1,10 +1,5 @@
 const searchInput = document.querySelector('.search');
 
-searchInput.addEventListener('keyup', () => {
-  fetch(`/properties/search/${searchInput.value}`)
-    .then((res) => res.json()).then((data) => createDom(data));
-});
-
 fetch('/properties/empty').then((res) => res.json())
   .then((data) => createDom(data));
 
@@ -15,6 +10,7 @@ function createDom(data) {
   data.forEach((e) => {
     const card = document.createElement('div');
     card.classList.add('card');
+    card.setAttribute('id', e.id);
     cardsContainer.appendChild(card);
 
     const image = document.createElement('img');
@@ -43,6 +39,9 @@ function createDom(data) {
 
     card.addEventListener('click', () => {
       const rentSection = document.querySelector('.rentSection');
+      const propertyId = document.querySelector('#propID');
+      console.log('e.kkkkkkkkkkkkkkkkkkkkkkkid', e.id);
+      propertyId.value = e.id;
       rentSection.style.display = 'flex';
 
       // rentSection.addEventListener('click', () => {
@@ -52,4 +51,7 @@ function createDom(data) {
   });
 }
 
-module.exports = createDom;
+searchInput.addEventListener('keyup', () => {
+  fetch(`/properties/search/${searchInput.value}`)
+    .then((res) => res.json()).then((data) => createDom(data));
+});

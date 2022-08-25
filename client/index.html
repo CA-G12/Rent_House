@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <a class="logo" href="#">RentOut</a>
+    <a class="logo" href="/">RentOut</a>
     <div class="nav">
       <a href="/">
         Home
@@ -33,13 +33,17 @@
     </div> -->
   </section>
   <section class="rentSection">
-      <form class="rent" action="post">
-        <input type="text" name="userName" placeholder="Put your name">
-        <input type="text" name="startDate" placeholder="choose a starting day">
-        <input type="text" name="endDate" placeholder="choose the last day">
-        <button>Rent</button>
+      <form class="rent" method="POST" action="/properties/rent">
+        <input type="text" name="propertyID" id="propID" hidden>
+        <input type="text" name="userName" placeholder="your name">
+        <input type="date" name="startDate" placeholder="choose a starting day">
+        <input type="date" name="endDate" placeholder="choose the last day">
+        <button type="submit">Rent</button>
+
       </form>
   </section>
   <script src="./users/homepage/index.js"></script>
 </body>
 </html>
+
+

@@ -14,6 +14,10 @@ const insertPropertyq = (photo, address, price, details, ownerId) => connection.
 // console.log('photo, address, price, details, ownerId', photo, address, price, details, ownerId);
 
 // INSERT INTO properties (prop_address, img, price, details, owner_id) VALUES ( $1, $2, $3, $4, $5)
+
+const insertUser = (propertyID, renterName) => connection.query('INSERT INTO renters (renter_name, property_id) VALUES ( $1, $2) returning *', [renterName, propertyID]);
+const editProprtyDates = (propertyID, startDate, endDate) => connection.query('UPDATE properties SET rent_start = $1 and rent_end = $2  WHERE id = $3 returning *', [startDate, endDate, propertyID]);
+
 module.exports = {
   getProperties,
   getEmptyProperties,
@@ -21,4 +25,6 @@ module.exports = {
   getProperty,
   getPropertiesSearch,
   insertPropertyq,
+  insertUser,
+  editProprtyDates,
 };
