@@ -1,7 +1,7 @@
 const { getOwners } = require('./owners');
 const {
   getProperties, getEmptyProperties, getOwnerProperties, getProperty,
-  getPropertiesSearch, insertPropertyq,
+  getPropertiesSearch, insertPropertyq, insertUser, editProprtyDates,
 } = require('./properties');
 
 module.exports = {
@@ -12,4 +12,6 @@ module.exports = {
   getProperty,
   getPropertiesSearch,
   insertPropertyq,
+  insertUser,
+  editProprtyDates,
 };
