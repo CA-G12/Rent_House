@@ -2,6 +2,7 @@ const {
   getAllProperties, getAllEmptyProperties, getAllOwnerProperties, getPropertyDetails,
   searchProperties,
   createProperty,
+  rentProperty,
 } = require('./properties');
 
 module.exports = {
@@ -11,4 +12,5 @@ module.exports = {
   getPropertyDetails,
   searchProperties,
   createProperty,
+  rentProperty,
 };

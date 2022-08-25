@@ -67,10 +67,10 @@ header a{
 
 .card{
     background-color: var(--green);
-    width: 30rem;
-    height: 35rem;
-    border-radius: 2rem;
-    margin: 1.5rem;
+    width: 24rem;
+    height: 29rem;
+    border-radius: 1rem;
+    margin: 1rem;
     cursor: pointer;
 }
 
@@ -81,20 +81,20 @@ header a{
 
 .card img{
     width:100%;
-    height: 70%;
-    border-radius: 2rem 2rem 0 0;
+    height: 75%;
+    border-radius: 1rem 1rem 0 0;
 }
 
 .cardContent{
     width: 100%;
-    height: 30%;
+    height: 25%;
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     gap:.5rem;
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     color: #000;
 }
 .cardContent p{
@@ -136,9 +136,12 @@ font-weight: 500;
 }
 
 .rent input{
-    padding: 1rem 0;
-    margin-bottom: 2rem;    
+    padding: 1rem ;
+    margin-bottom: 2rem;  
+    
 }
+
+
 
 .rent input:focus{
     outline: .1rem solid var(--lighter);

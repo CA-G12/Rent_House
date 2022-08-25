@@ -1,6 +1,6 @@
 const {
   getProperties, getEmptyProperties, getOwnerProperties, getProperty,
-  getPropertiesSearch, insertPropertyq,
+  getPropertiesSearch, insertPropertyq, insertUser, editProprtyDates,
 } = require('../../databse/queries');
 
 const getAllProperties = (req, res) => {
@@ -31,8 +31,18 @@ const createProperty = (req, res) => {
     img, prop_address, price, details, owner_id,
   } = req.body;
 
-  console.log(req.body);
-  insertPropertyq(img, prop_address, price, details, owner_id).then((data) => res.redirect('/')).catch((err) => console.log('err'));
+  // console.log(req.body);
+  insertPropertyq(img, prop_address, price, details, owner_id).then(res.redirect('/')).catch((err) => console.log(err));
+};
+
+const rentProperty = (req, res) => {
+  const {
+    propertyID, userName, startDate, endDate,
+  } = req.body;
+
+  editProprtyDates(propertyID, startDate, endDate)
+    .then(res.redirect('/'))
+    .catch((err) => console.log(err));
 };
 
 module.exports = {
@@ -42,4 +52,5 @@ module.exports = {
   getPropertyDetails,
   searchProperties,
   createProperty,
+  rentProperty,
 };
